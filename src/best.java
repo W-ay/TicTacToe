@@ -12,7 +12,7 @@ public class best {
 		if((x>0&&x<4)&&(y>0&&y<4))//判断输入是否正确
 			{
 			if(chess.draw(x,y) != true)//下棋不和规则，则重新下棋
-				i--;
+				i--; 
 			}
 		else {
 			System.out.println("输入的位置不对，请重新输入");
