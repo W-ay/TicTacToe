@@ -1,4 +1,9 @@
-
+/**
+ * 此为废弃的文件，可以不看
+ * 但为了后续的可拓展性，留了下来
+ * @author Way
+ *
+ */
 public class windows {
 	private int length;
 	private int width;
