@@ -9,7 +9,7 @@ public class game {
 //		}
 	char [][]win = new char[a][b];
 	
-	public void csh() {
+	public void csh() {//初始化
 		for(int i = 0;i<a;i++) {
 			for(int j = 0; j<b;j++) {
 				win[i][j] = '#';
@@ -30,6 +30,8 @@ public class game {
 					win[x][y] = 'X';
 				else 
 					win[x][y] = '0';
+				if(this.judge()==true)
+					System.out.println(win[x][y]+"赢得了比赛");
 				number++;
 			}
 			else {
@@ -45,5 +47,19 @@ public class game {
 			System.out.println(a);
 		}
 		return true;
+	}
+	public boolean judge() {
+		for(int i = 0;i<3;i++) {
+			if(win[i][0]==win[i][1]&&win[i][1]==win[i][2])
+				return true;
+			else if(win[0][i]==win[1][i]&&win[1][i]==win[2][i])
+				return true;
+		}
+		if(win[0][0]==win[1][1]&&win[1][1]==win[2][2])//判断斜向是否赢棋
+			return true;
+		else if(win[0][2]==win[1][1]&&win[1][1]==win[2][0])
+			return true;
+	//	System.out.println("判断程序未正确运行！");
+		return false;
 	}
 }
