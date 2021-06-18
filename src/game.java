@@ -1,5 +1,6 @@
 
 public class game {
+	
 	private int a = 3;//棋盘横向多大
 	private int b = 3;//棋盘竖向多大
 	private int number = 1;//记录当前是哪个棋子
@@ -65,4 +66,5 @@ public class game {
 			return true;
 		return false;
 	}
+	
 }
